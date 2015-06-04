@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0A32301B20C72300FDAD0B /* SoyAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF0A322E1B20C72300FDAD0B /* SoyAssert.cpp */; };
 		FB0193ED1AC438EE0073D83B /* SoyMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB0193EB1AC438ED0073D83B /* SoyMath.cpp */; };
 		FB0193F01AC442EC0073D83B /* TFaroLightScanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB0193EF1AC442EC0073D83B /* TFaroLightScanner.cpp */; };
 		FB2535161A97B34600A61590 /* TChannelFork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB2535141A97B34600A61590 /* TChannelFork.cpp */; };
@@ -80,6 +81,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF0A322E1B20C72300FDAD0B /* SoyAssert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoyAssert.cpp; path = src/SoyAssert.cpp; sourceTree = "<group>"; };
+		BF0A322F1B20C72300FDAD0B /* SoyAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoyAssert.h; path = src/SoyAssert.h; sourceTree = "<group>"; };
 		FB0193EA1AC4368C0073D83B /* TFaroLightScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TFaroLightScanner.h; path = src/TFaroLightScanner.h; sourceTree = SOURCE_ROOT; };
 		FB0193EB1AC438ED0073D83B /* SoyMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoyMath.cpp; path = src/SoyMath.cpp; sourceTree = "<group>"; };
 		FB0193EC1AC438EE0073D83B /* SoyMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoyMath.h; path = src/SoyMath.h; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 				FB8A06251A2E5A7C0099596C /* SoyApp.h */,
 				FB63E5181A71C3E9002C59BE /* SoyRingArray.cpp */,
 				FB63E5191A71C3E9002C59BE /* SoyRingArray.h */,
+				BF0A322E1B20C72300FDAD0B /* SoyAssert.cpp */,
+				BF0A322F1B20C72300FDAD0B /* SoyAssert.h */,
 				FB8A06261A2E5A7C0099596C /* SoyArray.cpp */,
 				FB8A06271A2E5A7C0099596C /* SoyDebug.cpp */,
 				FB0193EB1AC438ED0073D83B /* SoyMath.cpp */,
@@ -532,6 +537,7 @@
 				FB8A06F01A2E6B520099596C /* DeferredTestReporter.cpp in Sources */,
 				FB8A06F31A2E6B520099596C /* SignalTranslator.cpp in Sources */,
 				FB8A06811A2E69340099596C /* SoyData.cpp in Sources */,
+				BF0A32301B20C72300FDAD0B /* SoyAssert.cpp in Sources */,
 				FB8A065F1A2E5A7C0099596C /* SoyRef.cpp in Sources */,
 				FB8A06531A2E5A7C0099596C /* SoyApp.cpp in Sources */,
 				FB8A06F81A2E6B520099596C /* TestList.cpp in Sources */,

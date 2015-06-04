@@ -17,19 +17,20 @@
 
 
 TPopOculus::TPopOculus() :
-	TJobHandler		( static_cast<TChannelManager&>(*this) )
+	TJobHandler		( static_cast<TChannelManager&>(*this) ),
+	TPopJobHandler	( static_cast<TJobHandler&>(*this) )
 {
 	AddJobHandler("exit", TParameterTraits(), *this, &TPopOculus::OnExit );
 
 	AddJobHandler("parsefsl", TParameterTraits(), *this, &TPopOculus::OnParseFsl );
 }
 
-void TPopOculus::AddChannel(std::shared_ptr<TChannel> Channel)
+bool TPopOculus::AddChannel(std::shared_ptr<TChannel> Channel)
 {
-	TChannelManager::AddChannel( Channel );
-	if ( !Channel )
-		return;
+	if ( !TChannelManager::AddChannel( Channel ) )
+		return false;
 	TJobHandler::BindToChannel( *Channel );
+	return true;
 }
 
 

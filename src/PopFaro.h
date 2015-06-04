@@ -6,12 +6,12 @@
 
 
 
-class TPopOculus : public TJobHandler, public TChannelManager
+class TPopOculus : public TJobHandler, public TPopJobHandler, public TChannelManager
 {
 public:
 	TPopOculus();
 	
-	virtual void	AddChannel(std::shared_ptr<TChannel> Channel) override;
+	virtual bool	AddChannel(std::shared_ptr<TChannel> Channel) override;
 
 	void			OnExit(TJobAndChannel& JobAndChannel);
 	void			OnParseFsl(TJobAndChannel& JobAndChannel);
