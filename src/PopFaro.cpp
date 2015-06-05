@@ -101,7 +101,9 @@ TPopAppError::Type PopMain(TJobParams& Params)
 	{
 		std::Debug << JobAndChannel.GetJob().mParams << std::endl;
 	};
-	BootupChannel->mOnJobRecieved.AddListener( RelayFunc );
+	//BootupChannel->mOnJobRecieved.AddListener( RelayFunc );
+	BootupChannel->mOnJobSent.AddListener( RelayFunc );
+	BootupChannel->mOnJobLost.AddListener( RelayFunc );
 	
 	App.AddChannel( BootupChannel );
 
