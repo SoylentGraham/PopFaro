@@ -21,7 +21,10 @@ TPopOculus::TPopOculus() :
 {
 	AddJobHandler("exit", TParameterTraits(), *this, &TPopOculus::OnExit );
 
-	AddJobHandler("parsefsl", TParameterTraits(), *this, &TPopOculus::OnParseFsl );
+	TParameterTraits ParseParameterTraits;
+	ParseParameterTraits.mAssumedKeys.PushBack("default");
+	ParseParameterTraits.mDefaultParams.PushBack( std::make_tuple("default_format","file/binary") );
+	AddJobHandler("parsefsl", ParseParameterTraits, *this, &TPopOculus::OnParseFsl );
 }
 
 bool TPopOculus::AddChannel(std::shared_ptr<TChannel> Channel)
@@ -50,6 +53,8 @@ void TPopOculus::OnParseFsl(TJobAndChannel& JobAndChannel)
 {
 	TJobReply Reply( JobAndChannel );
 
+	std::Debug << JobAndChannel.GetJob().mParams << std::endl;
+	
 	//	load binary from payload
 	Array<char> Binary;
 	if ( !JobAndChannel.GetJob().mParams.GetParamAs(TJobParam::Param_Default,Binary) )
